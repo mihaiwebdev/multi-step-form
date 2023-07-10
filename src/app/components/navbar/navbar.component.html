@@ -16,8 +16,13 @@
       fill="#F9818E"
     />
   </svg>
-  <div class="step" routerLink="/">
-    <div class="stepNum" routerLinkActive="active">1</div>
+  <div class="step">
+    <div
+      class="stepNum"
+      [ngClass]="currentPath === '/personal-info' ? 'active' : ''"
+    >
+      1
+    </div>
 
     <div class="stepInfo">
       <span>STEP 1</span>
@@ -25,17 +30,24 @@
     </div>
   </div>
 
-  <div class="step" routerLink="/select-plan">
-    <div class="stepNum" routerLinkActive="active">2</div>
+  <div class="step">
+    <div
+      class="stepNum"
+      [ngClass]="currentPath === '/select-plan' ? 'active' : ''"
+    >
+      2
+    </div>
 
     <div class="stepInfo">
-      <span class="step-num">STEP 2</span>
+      <span>STEP 2</span>
       <p>SELECT PLAN</p>
     </div>
   </div>
 
-  <div class="step" routerLink="/adds-on">
-    <div class="stepNum" routerLinkActive="active">3</div>
+  <div class="step">
+    <div class="stepNum" [ngClass]="currentPath === '/adds-on' ? 'active' : ''">
+      3
+    </div>
 
     <div class="stepInfo">
       <span>STEP 3</span>
@@ -43,8 +55,10 @@
     </div>
   </div>
 
-  <div class="step" routerLink="/summary">
-    <div class="stepNum" routerLinkActive="active">4</div>
+  <div class="step">
+    <div class="stepNum" [ngClass]="currentPath === '/summary' ? 'active' : ''">
+      4
+    </div>
 
     <div class="stepInfo">
       <span>STEP 4</span>

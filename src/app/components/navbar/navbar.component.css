@@ -4,7 +4,7 @@
   display: none;
 }
 .navbar {
-  background: url('../../../../assets/images/desk-nav-bg.jpg') no-repeat center center /cover;
+  background: url('../../../assets/images/desk-nav-bg.jpg') no-repeat center center /cover;
   width: 274px;
   height: 568px;
   color: #fff;
@@ -16,10 +16,7 @@
   display: flex;
   margin-top: 30px;
 }
-.step:hover {
-  transform: scale(0.98);
-  cursor: pointer;
-}
+
 .stepNum {
   margin-top: 5px;
   width: 33px;
