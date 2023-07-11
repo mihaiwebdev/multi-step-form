@@ -1,17 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormService } from 'src/app/services/form.service';
 import { Router } from '@angular/router';
-
-interface Plan {
-  plan: string;
-  monthly: number;
-  yearly: number;
-}
-
-interface PlanData {
-  plan: Plan;
-  billing: string;
-}
+import { Plan } from './plan';
+import { PlanData } from './planData';
 
 @Component({
   selector: 'app-step-two-form',

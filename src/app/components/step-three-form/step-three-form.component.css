@@ -1,0 +1,45 @@
+
+.add-on-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #D6D9E6;
+  border-radius: 8px;
+  margin: 18px 0;
+  padding: 15px 20px;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #483EFF;
+  }
+}
+.add-on-card:first-of-type {
+  margin-top: 40px;
+}
+
+.add-on-card p {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.gray-text {
+  font-size: 14px;
+}
+
+.add-on-price {
+  color: #483EFF;
+  margin-left: auto;
+}
+.add-on-card.selected{
+  border: 1px solid #483EFF;
+  background-color: #F8F9FF;
+}
+
+.checkbox-div {
+  width: 18px ;
+  height: 18px;
+  border-radius: 3.5px;
+  border: 1px solid #D6D9E6;
+  margin-right: 30px;
+}

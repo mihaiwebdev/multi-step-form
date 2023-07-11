@@ -74,30 +74,7 @@
   transform: translateX(20px);
 }
 
-.form-submit {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 30px;
-}
-.go-back {
-  background: #fff;
-  border: none;
-  outline: none;
-  color: #9699AA;
-  font-weight: 500;
-  font-family: 'Ubuntu';
-  font-size: 16px;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  height: 20px;
-  margin-bottom: 10px;
 
-  &:hover {
-    color: #022959;
-  }
-}
 
 @media (max-width: 768px) {
   .select-group {
@@ -115,8 +92,5 @@
   .billing{
     margin-bottom: 30px;
   }
-  .go-back {
-    margin-bottom: 30px;
-    margin-left: 20px;
-  } 
+
 }

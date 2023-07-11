@@ -7,7 +7,7 @@ import { StepThreeFormComponent } from './components/step-three-form/step-three-
 import { SummaryComponent } from './components/summary/summary.component';
 
 const routes: Routes = [
-  { path: 'personal-info', component: StepOneFormComponent },
+  { path: '', component: StepOneFormComponent },
   { path: 'select-plan', component: StepTwoFormComponent },
   { path: 'adds-on', component: StepThreeFormComponent },
   { path: 'summary', component: SummaryComponent },
