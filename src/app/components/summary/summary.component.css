@@ -1,0 +1,71 @@
+.summary {
+  background-color: #F8F9FF;
+  padding:20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+}
+.summary-card.plan {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #9699AA;
+  .price {
+    font-weight: 700;
+  }
+  .gray-text {
+    text-decoration: underline;
+  }
+}
+.summary p {
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: 400;
+}
+
+.summary-card.total {
+  margin-top: 15px;
+}
+.summary-card.total .price {
+  font-weight: 700;
+  color: #483EFF;
+}
+
+.form-submit {
+  margin-bottom: 40px;
+}
+
+.form-submit  .confirm-btn {
+  width: 123px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: #483EFF;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+  margin-top: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+@media(max-width: 768px) {
+  .summary {
+    width: auto;
+  }
+  .form-submit{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-submit .confirm-btn {
+    margin: auto 0;
+    margin-right: 15px;
+  }
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormService } from 'src/app/services/form.service';
+import { PersonalInfo } from './personalInfo';
 
 @Component({
   selector: 'app-step-one-form',
@@ -10,6 +11,7 @@ import { FormService } from 'src/app/services/form.service';
 })
 export class StepOneFormComponent implements OnInit {
   personalInfoForm!: FormGroup;
+  dataFromLS!: PersonalInfo;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -18,16 +20,16 @@ export class StepOneFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const dataFromLS = this.formService.getData('personal-info');
+    this.dataFromLS = this.formService.getData('personal-info');
 
     this.personalInfoForm = this.formBuilder.group({
-      name: [dataFromLS ? dataFromLS.name : '', Validators.required],
+      name: [this.dataFromLS ? this.dataFromLS.name : '', Validators.required],
       email: [
-        dataFromLS ? dataFromLS.email : '',
+        this.dataFromLS ? this.dataFromLS.email : '',
         [Validators.email, Validators.required],
       ],
       phone: [
-        dataFromLS ? dataFromLS.phone : '',
+        this.dataFromLS ? this.dataFromLS.phone : '',
         [
           Validators.required,
           Validators.pattern(

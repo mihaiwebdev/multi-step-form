@@ -31,7 +31,9 @@
           <p>{{ addOn.name }}</p>
           <span class="gray-text">{{ addOn.text }}</span>
         </div>
-        <p class="add-on-price">+{{ addOn.price }}$/mo</p>
+        <p class="add-on-price">
+          +{{ billing === "yearly" ? addOn.yearlyPrice : addOn.price }}$/mo
+        </p>
       </div>
     </div>
   </div>

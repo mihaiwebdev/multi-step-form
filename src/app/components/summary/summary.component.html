@@ -1,1 +1,47 @@
-<p>summary works!</p>
+<div class="form-group">
+  <div class="form-fields">
+    <h1>Finishing up</h1>
+    <p class="gray-text">Double-check everything looks OK before confirming.</p>
+
+    <div class="summary">
+      <div class="summary-card plan">
+        <div>
+          <p>
+            {{ plan.plan.plan[0].toUpperCase() + plan.plan.plan.slice(1) }} ({{
+              plan.billing[0].toUpperCase() + plan.billing.slice(1)
+            }})
+          </p>
+          <span class="gray-text">Change</span>
+        </div>
+        <p class="price">
+          ${{
+            plan.billing === "yearly" ? plan.plan.yearly : plan.plan.monthly
+          }}/
+          {{ plan.billing === "yearly" ? "yr" : "mo" }}
+        </p>
+      </div>
+
+      <div *ngFor="let addOn of addOns" class="summary-card">
+        <span class="gray-text">{{ addOn.name }}</span>
+        <p class="price">
+          +${{ plan.billing === "monthly" ? addOn.price : addOn.yearlyPrice }}/
+          {{ plan.billing === "monthly" ? "mo" : "yr" }}
+        </p>
+      </div>
+    </div>
+
+    <div class="summary-card total">
+      <p class="gray-text">
+        Total (per {{ plan.billing === "yearly" ? "year" : "monthly" }})
+      </p>
+      <p class="price">
+        +${{ total }}/{{ plan.billing === "yearly" ? "yr" : "mo" }}
+      </p>
+    </div>
+  </div>
+
+  <div class="form-submit">
+    <button routerLink="/adds-on" class="go-back">Go Back</button>
+    <button routerLink="/success" class="confirm-btn">Confirm</button>
+  </div>
+</div>
